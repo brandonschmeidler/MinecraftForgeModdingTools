@@ -1,0 +1,285 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MCModSetup.gd" type="Script" id=1]
+
+[node name="MCModSetup" type="Node"]
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 1008.0
+margin_bottom = 584.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="modRootPath" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 1008.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/modRootPath"]
+margin_top = 5.0
+margin_right = 105.0
+margin_bottom = 19.0
+text = "Mod Root Folder"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/modRootPath"]
+margin_left = 109.0
+margin_right = 839.0
+margin_bottom = 24.0
+hint_tooltip = "The root directory where you will develop your mod."
+size_flags_horizontal = 3
+editable = false
+
+[node name="BrowseButton" type="Button" parent="MarginContainer/VBoxContainer/modRootPath"]
+margin_left = 843.0
+margin_right = 867.0
+margin_bottom = 24.0
+text = "..."
+
+[node name="SetupButton" type="Button" parent="MarginContainer/VBoxContainer/modRootPath"]
+margin_left = 871.0
+margin_right = 968.0
+margin_bottom = 24.0
+text = "Setup Project"
+
+[node name="RunButton" type="Button" parent="MarginContainer/VBoxContainer/modRootPath"]
+margin_left = 972.0
+margin_right = 1008.0
+margin_bottom = 24.0
+text = "Run"
+
+[node name="mainClassName" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 1008.0
+margin_bottom = 52.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/mainClassName"]
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
+text = "Main Class Name"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/mainClassName"]
+margin_left = 114.0
+margin_right = 1008.0
+margin_bottom = 24.0
+hint_tooltip = "The name of your mod class. Follow Java's variable rules. No spaces, can't start with a number, etc.
+CamelCase is recommended. "
+size_flags_horizontal = 3
+
+[node name="domainNamespaceModid" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 56.0
+margin_right = 1008.0
+margin_bottom = 80.0
+
+[node name="domainLabel" type="Label" parent="MarginContainer/VBoxContainer/domainNamespaceModid"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+text = "Domain"
+
+[node name="domainLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/domainNamespaceModid"]
+margin_left = 54.0
+margin_right = 327.0
+margin_bottom = 24.0
+hint_tooltip = "The domain of your mods. Defaults to \"mod\"."
+size_flags_horizontal = 3
+placeholder_text = "mod"
+
+[node name="namespaceLabel" type="Label" parent="MarginContainer/VBoxContainer/domainNamespaceModid"]
+margin_left = 331.0
+margin_top = 5.0
+margin_right = 406.0
+margin_bottom = 19.0
+text = "Namespace"
+
+[node name="namespaceLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/domainNamespaceModid"]
+margin_left = 410.0
+margin_right = 683.0
+margin_bottom = 24.0
+hint_tooltip = "The namespace of your mods. This can be anything. No spaces allowed. Lower-case recommended."
+size_flags_horizontal = 3
+
+[node name="modIdLabel" type="Label" parent="MarginContainer/VBoxContainer/domainNamespaceModid"]
+margin_left = 687.0
+margin_top = 5.0
+margin_right = 730.0
+margin_bottom = 19.0
+text = "ModID"
+
+[node name="modIdLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/domainNamespaceModid"]
+margin_left = 734.0
+margin_right = 1008.0
+margin_bottom = 24.0
+hint_tooltip = "The modId of this mod. No spaces allowed. Lower-case recommended."
+size_flags_horizontal = 3
+
+[node name="displayName" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 84.0
+margin_right = 1008.0
+margin_bottom = 108.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/displayName"]
+margin_top = 5.0
+margin_right = 89.0
+margin_bottom = 19.0
+text = "Display Name"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/displayName"]
+margin_left = 93.0
+margin_right = 1008.0
+margin_bottom = 24.0
+hint_tooltip = "This is how your mod name is displayed in the mod list inside Minecraft."
+size_flags_horizontal = 3
+
+[node name="updateJSONURL" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 112.0
+margin_right = 1008.0
+margin_bottom = 136.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/updateJSONURL"]
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
+text = "JSON Update URL"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/updateJSONURL"]
+margin_left = 114.0
+margin_right = 1008.0
+margin_bottom = 24.0
+hint_tooltip = "A URL to query for updates for this mod. See the JSON update specification."
+size_flags_horizontal = 3
+
+[node name="displayURL" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 140.0
+margin_right = 1008.0
+margin_bottom = 164.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/displayURL"]
+margin_top = 5.0
+margin_right = 101.0
+margin_bottom = 19.0
+text = "Mod Homepage"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/displayURL"]
+margin_left = 105.0
+margin_right = 1008.0
+margin_bottom = 24.0
+hint_tooltip = "A URL for the \"homepage\" for this mod, displayed in the mod UI."
+size_flags_horizontal = 3
+
+[node name="logoFile" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 168.0
+margin_right = 1008.0
+margin_bottom = 192.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/logoFile"]
+margin_top = 5.0
+margin_right = 93.0
+margin_bottom = 19.0
+text = "Logo Filename"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/logoFile"]
+margin_left = 97.0
+margin_right = 1008.0
+margin_bottom = 24.0
+hint_tooltip = "A file name (in the root of the mod JAR) containing a logo for display"
+size_flags_horizontal = 3
+
+[node name="credits" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 196.0
+margin_right = 1008.0
+margin_bottom = 220.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/credits"]
+margin_top = 5.0
+margin_right = 45.0
+margin_bottom = 19.0
+text = "Credits"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/credits"]
+margin_left = 49.0
+margin_right = 1008.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="authors" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 224.0
+margin_right = 1008.0
+margin_bottom = 248.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/authors"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+text = "Authors"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/authors"]
+margin_left = 54.0
+margin_right = 1008.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="description" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 252.0
+margin_right = 1008.0
+margin_bottom = 584.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/description"]
+margin_right = 74.0
+margin_bottom = 332.0
+size_flags_vertical = 3
+text = "Description"
+valign = 1
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/description"]
+margin_left = 78.0
+margin_right = 1008.0
+margin_bottom = 332.0
+focus_next = NodePath("../../mainClassName/LineEdit")
+focus_previous = NodePath("../../authors/LineEdit")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_left = 155.0
+margin_top = 64.0
+margin_right = 811.0
+margin_bottom = 498.0
+window_title = "Open a Directory"
+dialog_text = "Choose Mod Root Folder..."
+mode = 2
+access = 2
+current_dir = "C:/Users/brand/Documents/Godot/MinecraftModdingTools"
+current_path = "C:/Users/brand/Documents/Godot/MinecraftModdingTools/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="MarginContainer/VBoxContainer/modRootPath/BrowseButton" to="." method="_on_BrowseButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/modRootPath/SetupButton" to="." method="_on_SetupButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/modRootPath/RunButton" to="." method="_on_RunButton_pressed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/mainClassName/LineEdit" to="." method="_on_mainClassName_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/domainNamespaceModid/domainLineEdit" to="." method="_on_domainLineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/domainNamespaceModid/namespaceLineEdit" to="." method="_on_namespaceLineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/domainNamespaceModid/modIdLineEdit" to="." method="_on_modIdLineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/displayName/LineEdit" to="." method="_on_displayName_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/updateJSONURL/LineEdit" to="." method="_on_updateJSONURL_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/displayURL/LineEdit" to="." method="_on_displayURL_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/logoFile/LineEdit" to="." method="_on_logoFile_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/credits/LineEdit" to="." method="_on_credits_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/authors/LineEdit" to="." method="_on_authors_LineEdit_text_changed"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/description/TextEdit" to="." method="_on_description_TextEdit_text_changed"]
+[connection signal="dir_selected" from="FileDialog" to="." method="_on_FileDialog_dir_selected"]
